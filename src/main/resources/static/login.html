@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/login.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex items-center justify-center h-screen">
+    <div id="parent-div"
+         class="bg-[#006d77] p-10 w-[900px] h-[500px] text-white rounded-[150px] relative drop-shadow-2xl flex justify-center items-center">
+        <div id="movable-div"
+             class="flex flex-col items-center justify-center bg-[#83c5be] w-[450px] h-[500px] text-white rounded-[150px] absolute transition-all duration-500 cursor-pointer space-y-4">
+            <h1 class="text-center text-xl font-semibold text-[#e29578]">
+                Welcome To Your basira
+            </h1>
+            <button type="submit" id="sign-in"
+                    class="w-40 bg-[#006d77] text-white py-1.5 px-4 rounded-md hover:bg-[#e29578] transition duration-300 text-sm">
+                Sign In
+            </button>
+            <button type="submit" id="sign-up"
+                    class="w-40 bg-[#006d77] text-white py-1.5 px-4 rounded-md hover:bg-[#e29578] transition duration-300 text-sm">
+                Sign Up
+            </button>
+
+        </div>
+        <div id="parent" class="flex justify-evenly items-start w-full absolute inset-0">
+            <div id="chiled1" class="hidden p-28 w-full">
+                <form class="space-y-4">
+                    <div>
+                        <label for="input1" class="block text-sm font-medium text-white mb-1">First Name</label>
+                        <input type="text" id="input1"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="first name"/>
+                    </div>
+
+                    <div>
+                        <label for="input2" class="block text-sm font-medium text-white mb-1">Last Name</label>
+                        <input type="text" id="input2"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="last name"/>
+                    </div>
+
+                    <div>
+                        <label for="input3" class="block text-sm font-medium text-white mb-1">Password</label>
+                        <input type="text" id="input3"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="password"/>
+                    </div>
+
+                    <button type="submit"
+                            class="w-60 bg-[#83c5be] text-white py-1.5 px-4 rounded-md hover:bg-blue-600 transition duration-300 text-sm">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div id="chiled2" class="hidden p-28 w-full">
+                <form class="space-y-4">
+                    <div>
+                        <label for="input1" class="block text-sm font-medium text-white mb-1">User Name</label>
+                        <input type="text" id="input1"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="first name"/>
+                    </div>
+                    <div>
+                        <label for="input3" class="block text-sm font-medium text-white mb-1">Password</label>
+                        <input type="text" id="input3"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="password"/>
+                    </div>
+                    <button type="submit"
+                            class="w-60 bg-[#83c5be] text-white py-1.5 px-4 rounded-md hover:bg-blue-600 transition duration-300 text-sm">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/login.js"></script>
+</body>
+
+</html>
