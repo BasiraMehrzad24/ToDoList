@@ -7,7 +7,6 @@
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/login.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
 
 <body class="bg-gray-100">
@@ -18,61 +17,71 @@
         <div id="movable-div"
              class="flex flex-col items-center justify-center bg-[#83c5be] w-[450px] h-[500px] text-white rounded-[150px] absolute transition-all duration-500 cursor-pointer space-y-4">
             <h1 class="text-center text-xl font-semibold text-[#e29578]">
-                Welcome To Your basira
+                Welcome To Your Basira
             </h1>
-            <button type="submit" id="sign-in"
+            <button type="button" id="sign-in"
                     class="w-40 bg-[#006d77] text-white py-1.5 px-4 rounded-md hover:bg-[#e29578] transition duration-300 text-sm">
                 Sign In
             </button>
-            <button type="submit" id="sign-up"
+            <button type="button" id="sign-up"
                     class="w-40 bg-[#006d77] text-white py-1.5 px-4 rounded-md hover:bg-[#e29578] transition duration-300 text-sm">
                 Sign Up
             </button>
-
         </div>
+
         <div id="parent" class="flex justify-evenly items-start w-full absolute inset-0">
+            <!-- Registration Form -->
             <div id="chiled1" class="hidden p-28 w-full">
-                <form class="space-y-4">
+                <form class="space-y-4" action="/register" method="POST">
                     <div>
-                        <label for="input1" class="block text-sm font-medium text-white mb-1">First Name</label>
-                        <input type="text" id="input1"
+                        <label for="firstName" class="block text-sm font-medium text-white mb-1">First Name</label>
+                        <input type="text" name="firstName" id="firstName"
                                class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
-                               placeholder="first name"/>
+                               placeholder="First Name" required />
                     </div>
 
                     <div>
-                        <label for="input2" class="block text-sm font-medium text-white mb-1">Last Name</label>
-                        <input type="text" id="input2"
-                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-white focus:border-white text-sm bg-transparent"
-                               placeholder="last name"/>
+                        <label for="lastName" class="block text-sm font-medium text-white mb-1">Last Name</label>
+                        <input type="text" name="lastName" id="lastName"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="Last Name" required />
                     </div>
 
                     <div>
-                        <label for="input3" class="block text-sm font-medium text-white mb-1">Password</label>
-                        <input type="text" id="input3"
+                        <label for="email" class="block text-sm font-medium text-white mb-1">Email</label>
+                        <input type="email" name="email" id="email"
                                class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
-                               placeholder="password"/>
+                               placeholder="Email" required />
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-white mb-1">Password</label>
+                        <input type="password" name="password" id="password"
+                               class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
+                               placeholder="Password" required />
                     </div>
 
                     <button type="submit"
                             class="w-60 bg-[#83c5be] text-white py-1.5 px-4 rounded-md hover:bg-blue-600 transition duration-300 text-sm">
-                        Submit
+                        Register
                     </button>
                 </form>
             </div>
+
+            <!-- Login Form -->
             <div id="chiled2" class="hidden p-28 w-full">
-                <form class="space-y-4">
+                <form class="space-y-4" action="/login" method="POST">
                     <div>
-                        <label for="input1" class="block text-sm font-medium text-white mb-1">User Name</label>
-                        <input type="text" id="input1"
+                        <label for="username" class="block text-sm font-medium text-white mb-1">User Name</label>
+                        <input type="text" name="username" id="username"
                                class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
-                               placeholder="first name"/>
+                               placeholder="User Name" required />
                     </div>
                     <div>
-                        <label for="input3" class="block text-sm font-medium text-white mb-1">Password</label>
-                        <input type="text" id="input3"
+                        <label for="login-password" class="block text-sm font-medium text-white mb-1">Password</label>
+                        <input type="password" name="password" id="login-password"
                                class="w-60 px-3 py-1.5 border border-[#83c5be] rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-sm bg-transparent"
-                               placeholder="password"/>
+                               placeholder="Password" required />
                     </div>
                     <button type="submit"
                             class="w-60 bg-[#83c5be] text-white py-1.5 px-4 rounded-md hover:bg-blue-600 transition duration-300 text-sm">

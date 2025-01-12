@@ -17,6 +17,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "postcss": "^8.4.49"
+    "postcss": "^8.4.49",
+    "yargs": "^17.7.2"
   }
 }
